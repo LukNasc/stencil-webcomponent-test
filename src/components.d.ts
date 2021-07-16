@@ -7,7 +7,9 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface CustomButton {
+        "disabled": boolean;
         "text": string;
+        "variant": string;
     }
 }
 declare global {
@@ -23,7 +25,9 @@ declare global {
 }
 declare namespace LocalJSX {
     interface CustomButton {
+        "disabled"?: boolean;
         "text"?: string;
+        "variant"?: string;
     }
     interface IntrinsicElements {
         "custom-button": CustomButton;
